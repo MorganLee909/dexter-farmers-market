@@ -1,11 +1,19 @@
 const express = require("express");
+const compression = require("compression");
 
 const app = express();
 
-mongoose.connect(process.env.PERSONAL_SITE, {useNewUrlParser: true, useUnifiedTopology: true});
+function requireHTTPS(req, res, next) {
+    if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
+      return res.redirect('https://' + req.get('host') + req.url);
+    }
+    next();
+}
 
 app.set("view engine", "ejs");
 
+app.use(requireHTTPS);
+app.use(compression())
 app.use(express.static(__dirname + "/views"));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
