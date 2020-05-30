@@ -1,5 +1,6 @@
 const express = require("express");
 const compression = require("compression");
+const session = require("cookie-session");
 
 const app = express();
 
@@ -17,6 +18,12 @@ app.use(compression())
 app.use(express.static(__dirname + "/views"));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(session({
+  secret: "Dexter Peoples Recpulic of markets that contain farmers",
+  cookie: {secure: false},
+  saveUninitialized: true,
+  resave: false
+}));
 
 require("./routes")(app);
 

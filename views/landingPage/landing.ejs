@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dexter Farmer's Market</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="./landingPage/landing.css">
+    </head>
+    <body>
+        <img id="backImg" src="./shared/images/dfm.jpg" alt="Dexter Farmers Market">
+
+        <div id="menu">
+            <p class="logo">Dexter Farmer's Market</p>
+
+            <div class="links">
+                <a href="/#">About us</a>
+
+                <a href="/#">Contact us</a>
+            </div>
+        </div>
+
+        <div id="header">
+            <h1>Dexter Farmers Market</h1>
+
+            <h3>445 Corinna Road, Dexter, Maine</h3>
+        </div>
+
+        <div id="news">
+            <h2>News</h2>
+
+            <div id="notifications">
+                <% for(let item of news){ %>
+                    <div class="post">
+                        <h4><%= item.title %></h4>
+                        <p class="date"><%= item.createdAt.toLocaleDateString('en-US') %></p>
+                        <p class="content"><%= item.content %></p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </body>
+</html>

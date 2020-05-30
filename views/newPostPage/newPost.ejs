@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dexter Farmer's Market</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../shared/style.css">
+    </head>
+    <body>
+        <form class="newPost" action="/post/create" method="post">
+            <label>Title:</label>
+            <input name="title" type="text" required>
+
+            <label>Content:</label>
+            <textarea name="content" rows="10" required></textarea>
+
+            <input class="newSubmit" type="submit" value="Submit">
+        </form>
+    </body>
+</html>

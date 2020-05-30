@@ -1,0 +1,101 @@
+*{margin:0;padding:0}
+
+html, body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+}
+
+#backImg{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    background: rgba(0, 0, 0);
+    color: white;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+    .logo{
+        font-size: 30px;
+        font-weight: bold;
+        margin-right: auto;
+    }
+
+    .links{
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+    }
+
+        .links a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .links a:hover{
+            color: lightgray;
+        }
+
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.75);
+    height: 20vh;
+    color: black;
+    padding: 25px;
+}
+
+    #header h1{
+        font-size: 50px;
+    }
+
+#news{
+    width: 50%;
+    margin: 50px auto;
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    overflow: auto;
+}
+
+    #news h2{
+        font-size: 30px;
+        text-decoration: underline;
+        margin-bottom: 25px;
+    }
+
+    .post{
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 5px 5px 5px black;
+        padding: 10px;
+    }
+
+    .post h4{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .date{
+        margin-bottom: 10px;
+    }
+
+    .content{
+        margin: 5px;
+        font-size: 20px;
+    }
