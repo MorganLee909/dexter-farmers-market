@@ -66,9 +66,9 @@ html, body{
 #news{
     width: 50%;
     max-height: 55vh;
-    margin: 50px auto;
+    margin: 25px auto;
     color: black;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     text-align: center;
     overflow: auto;
 }
@@ -76,7 +76,7 @@ html, body{
     #news h2{
         font-size: 30px;
         text-decoration: underline;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
 
     .post{
@@ -99,4 +99,5 @@ html, body{
     .content{
         margin: 5px;
         font-size: 20px;
+        line-height: 35px;
     }
