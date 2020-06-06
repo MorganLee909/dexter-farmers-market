@@ -48,10 +48,12 @@
         </div>
 
         <script>
-            let image = document.getElementById("headerLogo");
-            let spacer = document.getElementById("imgSpacer");
+            window.onload = ()=>{
+                let image = document.getElementById("headerLogo");
+                let spacer = document.getElementById("imgSpacer");
 
-            spacer.setAttribute("style", `width: ${image.width}px`);
+                spacer.setAttribute("style", `width: ${image.clientWidth}px`);
+            }
         </script>
     </body>
 </html>
