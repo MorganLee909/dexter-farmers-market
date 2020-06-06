@@ -18,8 +18,15 @@ MongoClient.connect(
 
 module.exports = {
     landingPage: function(req, res){
-        Post.find().toArray()
+        Post.aggregate([
+            {$sort: {createdAt: -1}},
+            {$limit: 10}
+        ]).toArray()
             .then((response)=>{
+                for(let i = 0; i < response.length; i++){
+                    response[i].content = response[i].content.split("\r\n");
+                }
+                console.log(response);
                 return res.render("./landingPage/landing.ejs", {news: response});
             })
             .catch((err)=>{

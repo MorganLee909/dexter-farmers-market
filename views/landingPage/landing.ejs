@@ -32,7 +32,9 @@
                     <div class="post">
                         <h4><%= item.title %></h4>
                         <p class="date"><%= item.createdAt.toLocaleDateString('en-US') %></p>
-                        <p class="content"><%= item.content %></p>
+                        <% for(let para of item.content){ %>
+                            <p class="content"><%= para %></p>
+                        <% } %>
                     </div>
                 <% } %>
             </div>
