@@ -26,11 +26,9 @@ module.exports = {
                 for(let i = 0; i < response.length; i++){
                     response[i].content = response[i].content.split("\r\n");
                 }
-                console.log(response);
                 return res.render("./landingPage/landing.ejs", {news: response});
             })
             .catch((err)=>{
-                console.log(err);
                 return res.render("./landingPage/landing.ejs");
             });
     },
